@@ -1,4 +1,17 @@
 .div{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin: 32px;
+}
+
+.labels{
+    font-size: 150%;
+}
+
+.fetchedVal{
+    font-size: 150%;
+    margin-left: 32px;
+}
+
+.new-transaction{
+    /* margin-left: 48px; */
 }

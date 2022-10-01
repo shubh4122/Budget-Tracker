@@ -17,12 +17,12 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Budget Tracker - SP</a>
 
-            <!-- Why is this button used here? see!!?? -->
+            <!-- Below button is used to show button for nav items in small screens - Responsiveness -->
 
-            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button> -->
+            </button>
 
 
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -36,22 +36,65 @@
     </nav>
 
 
-    <div class="row justify-content-between">
-        <div class="div col">
-            <h2>Expenditure</h2>
-            <form action="">
+    <!-- <button type="button" class="btn btn-outline-info">+5</button>
+            <button type="button" class="btn btn-outline-info">+10</button>
+            <button type="button" class="btn btn-outline-info">+50</button>
+            <button type="button" class="btn btn-outline-info">+100</button> -->
 
-                <button type="button" class="btn btn-outline-info">+5</button>
-                <button type="button" class="btn btn-outline-info">+10</button>
-                <button type="button" class="btn btn-outline-info">+50</button>
-                <button type="button" class="btn btn-outline-info">+100</button>
+    <div class="div container">
+        <h2>Expenditure</h2>
+        <br>
 
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col" class="labels">Spent On</th>
+                    <th scope="col" class="fetchedVal">Spent</th>
+                    <th scope="col" class="labels">New Transaction</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td class="labels">Mobile Recharge + Wifi</td>
+                    <td class="fetchedVal">Rs. 0</td>
+                    <td>
+                        <button type="button" class="btn btn-outline-info new-transaction">Add new Transaction</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td class="labels">Auto</td>
+                    <td class="fetchedVal">Rs. 0</td>
+                    <td>
+                        <button type="button" class="btn btn-outline-info new-transaction">Add new Transaction</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td class="labels">Food</td>
+                    <td class="fetchedVal">Rs. 0</td>
+                    <td>
+                        <button type="button" class="btn btn-outline-info new-transaction">Add new Transaction</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td class="labels">Travel</td>
+                    <td class="fetchedVal">Rs. 0</td>
+                    <td>
+                        <button type="button" class="btn btn-outline-info new-transaction">Add new Transaction</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 
-            </form>
-        </div>
-        <div class="div col">
+        <br><br>
+        
+        <button type="button" class="btn btn-outline-info">Add new Item</button>
+                    
 
-        </div>
     </div>
 
 
