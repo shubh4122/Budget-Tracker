@@ -27,29 +27,84 @@
 
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link"href="/index.html">Expenditure</a>
+                    <a class="nav-link"href="index.html">Expenditure</a>
                     <a class="nav-link active" aria-current="page"  href="#">Monthly Budget</a>
-                    <a class="nav-link" href="/compare.html">Compare</a>
+                    <a class="nav-link" href="compare.html">Compare</a>
                 </div>
             </div>
         </div>
     </nav>
 
 
-    <div class="row justify-content-between">
-        <div class="div col">
-            <h2>Estimated</h2>
-            <button type="button" class="btn btn-info">Add Estimated Budget</button>
+    <br><br>
+    <div class="container">
+        <h2>Estimated Monthly Budget</h2>
+        <br>
 
-            
-        </div>
-        <div class="div col">
-            
-            <div class="inflate-div-estbud">
-                <!-- Inflate html code to display data entered/form -->
-            </div>
-        </div>
+        <!-- Will submit the Estimation and lock all input fields by disabling them -->
+        <button type="button" class="btn btn-outline-info">Lock Estimation</button>
+
+        <!-- Enables input fields to reenter the values -->
+        <button type="button" class="btn btn-outline-info">Unlock Estimation</button>
+
+        <br><br>
+        <h4>For month :</h4>
+        <input type="month" id="month-estm">
+
+        <br><br>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col" class="labels">Spent On</th>
+                    <th scope="col" class="fetchedVal">Spent</th>
+                    <th scope="col" class="labels">Change Estimation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td class="labels">Mob + Wifi</td>
+                    <td class="fetchedVal">Rs. 0</td>
+                    <td>
+                        <button type="button" class="btn btn-outline-info new-transaction">Change Estimation</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td class="labels">Auto</td>
+                    <td class="fetchedVal">Rs. 0</td>
+                    <td>
+                        <button type="button" class="btn btn-outline-info new-transaction">Change Estimation</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td class="labels">Food</td>
+                    <td class="fetchedVal">Rs. 0</td>
+                    <td>
+                        <button type="button" class="btn btn-outline-info new-transaction">Change Estimation</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td class="labels">Travel</td>
+                    <td class="fetchedVal">Rs. 0</td>
+                    <td>
+                        <button type="button" class="btn btn-outline-info new-transaction">Change Estimation</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br><br>
+
+        <button type="button" class="btn btn-outline-info">Add new Item</button>
+
+
     </div>
+
+
 
 
 
