@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Budget Tracker - SP</a>
+
+            <!-- Why is this button used here? see!!?? -->
+
+            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button> -->
+
+
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="#">Expenditure</a>
+                    <a class="nav-link" href="estimated.html">Monthly Budget</a>
+                    <a class="nav-link" href="compare.html">Compare</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="row justify-content-between">
+        <div class="div col">
+            <h2>Expenditure</h2>
+            <form action="">
+
+                <button type="button" class="btn btn-outline-info">+5</button>
+                <button type="button" class="btn btn-outline-info">+10</button>
+                <button type="button" class="btn btn-outline-info">+50</button>
+                <button type="button" class="btn btn-outline-info">+100</button>
+
+
+            </form>
+        </div>
+        <div class="div col">
+
+        </div>
+    </div>
+
+
+
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAQX8rBWNCgqd-aUtizJoJK1drTKtqjnqw",
+            authDomain: "budgettracker-eb548.firebaseapp.com",
+            databaseURL: "https://budgettracker-eb548-default-rtdb.firebaseio.com",
+            projectId: "budgettracker-eb548",
+            storageBucket: "budgettracker-eb548.appspot.com",
+            messagingSenderId: "1037630041958",
+            appId: "1:1037630041958:web:4c344e71e0c67d0d5b22a7"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        import { getDatabase, ref, child, onValue } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-database.js"
+        const db = getDatabase()
+
+
+
+        function getDataRealtime() {
+
+            const dbRef = ref(db, 'test')
+            onValue(dbRef, (snapshot) => {
+
+                console.log('Entering')
+                console.log(snapshot.val())
+                // snapshot.forEach(childSnapshot => {
+                //     // alert(childSnapshot.val())
+                // console.log('Entered')
+                // });
+                console.log('Exiting')
+
+            })
+
+        }
+
+        window.onload = getDataRealtime;
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
