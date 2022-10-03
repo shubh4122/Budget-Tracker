@@ -9,6 +9,7 @@
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="estimated.js"></script>
 </head>
 
 <body>
@@ -42,14 +43,13 @@
         <br>
 
         <!-- Will submit the Estimation and lock all input fields by disabling them -->
-        <button type="button" class="btn btn-outline-info">Lock Estimation</button>
+        <button id="lockBtn" type="button" class="btn btn-outline-info">Lock Estimation</button>
 
         <!-- Enables input fields to reenter the values -->
-        <button type="button" class="btn btn-outline-info">Unlock Estimation</button>
+        <button id="unlockBtn" type="button" class="btn btn-outline-info">Unlock Estimation</button>
 
         <br><br>
-        <h4>For month :</h4>
-        <input type="month" id="month-estm">
+        <h4 id="month"></h4>
 
         <br><br>
         <table class="table">
@@ -58,49 +58,57 @@
                     <th scope="col">#</th>
                     <th scope="col" class="labels">Spent On</th>
                     <th scope="col" class="fetchedVal">Spent</th>
-                    <th scope="col" class="labels">Change Estimation</th>
+                    <th scope="col" class="labels">Changed Estimation</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <th scope="row">1</th>
                     <td class="labels">Mob + Wifi</td>
-                    <td class="fetchedVal">Rs. 0</td>
+                    <td id="val_wifi" class="fetchedVal">Rs. 0</td>
                     <td>
-                        <button type="button" class="btn btn-outline-info new-transaction">Change Estimation</button>
+                        <input type="text" id="estimation_wifi" placeholder="Rs. 0">
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">2</th>
                     <td class="labels">Auto</td>
-                    <td class="fetchedVal">Rs. 0</td>
+                    <td id="val_auto" class="fetchedVal">Rs. 0</td>
                     <td>
-                        <button type="button" class="btn btn-outline-info new-transaction">Change Estimation</button>
+                        <input type="text" id="estimation_auto" placeholder="Rs. 0">
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">3</th>
                     <td class="labels">Food</td>
-                    <td class="fetchedVal">Rs. 0</td>
+                    <td id="val_food" class="fetchedVal">Rs. 0</td>
                     <td>
-                        <button type="button" class="btn btn-outline-info new-transaction">Change Estimation</button>
+                        <input type="text" id="estimation_food" placeholder="Rs. 0">
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">4</th>
                     <td class="labels">Travel</td>
-                    <td class="fetchedVal">Rs. 0</td>
+                    <td id="val_travel" class="fetchedVal">Rs. 0</td>
                     <td>
-                        <button type="button" class="btn btn-outline-info new-transaction">Change Estimation</button>
+                        <input type="text" id="estimation_travel" placeholder="Rs. 0">
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td class="labels">Other/Misc.</td>
+                    <td id="val_misc" class="fetchedVal">Rs. 0</td>
+                    <td>
+                        <input type="text" id="estimation_misc" placeholder="Rs. 0 (Note Spent on?)">
                     </td>
                 </tr>
             </tbody>
         </table>
 
         <br><br>
-
+<!-- 
         <button type="button" class="btn btn-outline-info">Add new Item</button>
-        <br><br><br>
+        <br><br><br> -->
 
     </div>
 
