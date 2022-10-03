@@ -50,8 +50,12 @@ document.getElementById('month').innerHTML = `For --> ${month}`
 
 
 // var estList = []
-const obj = {wifi: '0', auto: '0', food: '0', travel: '0', misc: '0'};
+const obj = { wifi: '0', auto: '0', food: '0', travel: '0', misc: '0' };
 var estMap = new Map(Object.entries(obj));
+var items = ["wifi", "auto", "food", "travel", "misc"]
+for (let i in items) {
+    estMap[items[i]] = 0
+}
 
 
 // ----------------------Reading data----------------------
@@ -68,7 +72,7 @@ function getDataRealtime() {
             i++;
         });
 
-    
+
         setDataInTable(estMap)
     })
 
@@ -92,7 +96,7 @@ function setDataInTable(estMap) {
 
 
 
-lockBtn.addEventListener("click", async() => {
+lockBtn.addEventListener("click", async () => {
     // ----------------------Submitting new Estimation if any, else keep it unchanged----------------------
     // Put NULL CHECK
 

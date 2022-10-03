@@ -38,17 +38,15 @@
     </nav>
 
 
-    <!-- <button type="button" class="btn btn-outline-info">+5</button>
-            <button type="button" class="btn btn-outline-info">+10</button>
-            <button type="button" class="btn btn-outline-info">+50</button>
-            <button type="button" class="btn btn-outline-info">+100</button> -->
-
     <br><br>
     <div class="container">
         <h2>Expenditure</h2>
         <br>
 
-        <table class="table">
+        <h4 id="month"></h4>
+        <br>
+
+        <!-- <table class="table">
             <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -91,11 +89,66 @@
                     </td>
                 </tr>
             </tbody>
+        </table> -->
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col" class="labels">Spent On</th>
+                    <th scope="col" class="fetchedVal">Spent</th>
+                    <th scope="col" class="labels">New Transaction</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td class="labels">Mob + Wifi</td>
+                    <td id="val_wifi" class="fetchedVal">Rs. 0</td>
+                    <td>
+                        <input type="number" id="expenditure_wifi" placeholder="Rs. 0">
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td class="labels">Auto</td>
+                    <td id="val_auto" class="fetchedVal">Rs. 0</td>
+                    <td>
+                        <input type="number" id="expenditure_auto" placeholder="Rs. 0">
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td class="labels">Food</td>
+                    <td id="val_food" class="fetchedVal">Rs. 0</td>
+                    <td>
+                        <input type="number" id="expenditure_food" placeholder="Rs. 0">
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td class="labels">Travel</td>
+                    <td id="val_travel" class="fetchedVal">Rs. 0</td>
+                    <td>
+                        <input type="number" id="expenditure_travel" placeholder="Rs. 0">
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td class="labels">Other/Misc.</td>
+                    <td id="val_misc" class="fetchedVal">Rs. 0</td>
+                    <td>
+                        <input type="text" id="expenditure_misc" placeholder="Rs. 0 (Note Spent on?)">
+                    </td>
+                </tr>
+            </tbody>
         </table>
+
 
         <br><br>
 
-        <button type="button" class="btn btn-outline-info">Add new Item</button>
+        <button type="button" class="btn btn-outline-info" id="submit">Confirm Transactions</button>
+        <button type="button" class="btn btn-outline-info" id="new-item">Add new Item</button>
         <br><br><br>
 
     </div>
