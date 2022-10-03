@@ -34,6 +34,14 @@ var est_travel = document.getElementById('estimation_travel')
 var est_misc = document.getElementById('estimation_misc')
 
 
+
+
+est_wifi.disabled = true
+est_auto.disabled = true
+est_food.disabled = true
+est_travel.disabled = true
+est_misc.disabled = true
+
 var date = new Date();
 // maybe for convenience create arr and through index show month name
 var month = `${date.getMonth() + 1}-${date.getFullYear()}`
@@ -84,7 +92,7 @@ function setDataInTable(estMap) {
 
 
 
-lockBtn.addEventListener("click", () => {
+lockBtn.addEventListener("click", async() => {
     // ----------------------Submitting new Estimation if any, else keep it unchanged----------------------
     // Put NULL CHECK
 
@@ -98,12 +106,19 @@ lockBtn.addEventListener("click", () => {
         misc: est_misc.value
     });
 
-    window.alert(est_wifi + " Written to database")
 
-    window.location.reload()
+    window.alert(month + " Written to database")
+
+    await window.location.reload()
+
 })
 
 
 unlockBtn.addEventListener("click", () => {
+    est_wifi.disabled = false
+    est_auto.disabled = false
+    est_food.disabled = false
+    est_travel.disabled = false
+    est_misc.disabled = false
     window.alert('Estimation Unlocked')
 })
